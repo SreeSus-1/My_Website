@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="home">
+    <h1>Hi, I’m Ramya Sree Kanijam</h1>
+    <p>I am a DevOps and Cloud Engineering professional with a strong focus on delivering business-driven solutions.
+
+        With hands-on experience as a Software Engineer at Infosys, I have worked on cloud infrastructure, automation pipelines, and DevOps practices to drive operational excellence.
+        
+        Currently, I am advancing my expertise through a Master's program and working as a Research Assistant at Texas A&M University–Corpus Christi, where I focus on cloud architecture, system optimization, and innovative technology research.
+        
+        I am passionate about aligning technology with business needs, optimizing processes, and delivering scalable solutions.
+        
+        I am actively seeking DevOps or Cloud Engineering Internship and Full-Time Opportunities where I can contribute my experience, research mindset, and drive for excellence.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>RustBench:</strong> Rust-based concurrency benchmarking tool.</li>
+        <li><strong>ML Pipeline Orchestrator:</strong> TensorFlow, Docker, Kubernetes - <a href="https://github.com/matdenkas/Machine-Learning-Pipeline-Orchestrator" target="_blank">View</a></li>
+        <li>More projects on <a href="https://github.com/SreeSus-1" target="_blank">GitHub</a></li>
+    </ul>
+</section>
+
+<!----- Experience – Year-scaled timeline --->
+<section id="experience">
+    <h2>Career Journey</h2>
+  
+    <div class="timeline-container">
+        <!-- centre line -->
+        <div class="timeline-line"></div>
+  
+        <!-- year ticks (2025 at top, 2017 at bottom) -->
+        {% set y = 2025 %}
+        {% for offset in range(0, 9) %}
+          <div class="timeline-year" style="top: {{ offset*100 }}px;">
+            {{ y - offset }}
+          </div>
+        {% endfor %}
+  
+        <!-- Research Assistant – 2024 – Present (1 yr) -->
+        <div class="timeline-box right"
+             style="top:   0px;      /* 2025-2025 = 0 */
+                    height:100px;    /* 2025-2024 = 1 yr */
+                    background:#1976d2;">
+          <h3>Master's Student and Research Assistant</h3>
+          <p>Texas A&M University Corpus Christi</p>
+        </div>
+  
+        <!-- Post-Grad DevOps – 2022 – 2023 (1 yr) -->
+        <div class="timeline-box right"
+             style="top: 200px;      /* 2025-2023 = 2 ×100 */
+                    height:100px;    /* 2023-2022 = 1 yr */
+                    background:#9c27b0;">
+          <h3>Post Graduate Program – DevOps</h3>
+          <p>Purdue University</p>
+        </div>
+  
+        <!-- Software Engineer – 2021 – 2024 (3 yrs) -->
+        <div class="timeline-box left"
+             style="top: 100px;      /* 2025-2024 = 1 ×100 */
+                    height:300px;    /* 2024-2021 = 3 yrs */
+                    background:#009688;">
+          <h3>Software Engineer</h3>
+          <p>Infosys</p>
+        </div>
+  
+        <!-- B.Tech – 2017 – 2021 (4 yrs) -->
+        <div class="timeline-box left"
+             style="top: 425px;      /* 2025-2021 = 4 ×100 */
+                    height:400px;    /* 2021-2017 = 4 yrs */
+                    background:#e91e63;">
+          <h3>B.Tech – Electronics</h3>
+          <p>Jawaharlal Nehru Technological University Kakinada</p>
+        </div>
+    </div>
+  </section>
+  
+<section id="more">
+    <h2>Find More About Me</h2>
+
+    <h3>Certifications</h3>
+    <ul>
+        <li>AWS Cloud Practitioner</li>
+        <li>DevOps by Purdue</li>
+    </ul>
+
+    <h3>Patents</h3>
+    <ul>
+        <li>Fog to Power Conversion</li>
+        <li>Medical Aid App</li>
+        <li>Vitamin-D Facilitator</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:rkanijam@islander.tamucc.edu">rkanijam@islander.tamucc.edu</a></p>
+    <p>GitHub: <a href="https://github.com/SreeSus-1" target="_blank">SreeSus-1</a></p>
+</section>
+
+{% endblock %}
